@@ -9,6 +9,6 @@ class Classification < ActiveRecord::Base
 
 
   def self.longest
-    Classification.joins(:boats).group('classifications.id').where('boat.id IN (?)', Boat.order('length DESC').limit(1).pluck(:id))
+    Classification.joins(:boats).group('classifications.id').where('boats.id IN (?)', Boat.order('length DESC').limit(1).pluck(:id))
   end
 end
