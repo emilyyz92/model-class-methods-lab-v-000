@@ -7,5 +7,6 @@ class Classification < ActiveRecord::Base
   end
 
   def self.longest
+    Classification.joins(:boats)
   end
 end
