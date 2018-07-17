@@ -5,4 +5,7 @@ class Classification < ActiveRecord::Base
   def self.my_all
     where()
   end
+
+  def self.longest
+  end
 end
